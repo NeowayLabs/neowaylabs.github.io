@@ -1,7 +1,7 @@
 all: serve
 
 install:
-	@if [[ ! -d vendor ]]; then \
+	@if [ ! -d vendor ]; then \
          bundle install --path vendor/bundle; \
 	     bundle add jekyll; \
     fi
