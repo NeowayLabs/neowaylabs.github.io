@@ -1,0 +1,125 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# theme: jekyll-theme-so-simple
+remote_theme: mmistakes/so-simple-theme
+locale: en-US
+title: "NeowayLabs"
+description: "NeowayLabs Tech-Blog."
+# baseurl: / # the subpath of your site, e.g. "/blog"
+url: https://neowaylabs.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+logo: /images/neoway.png # path of site logo, e.g. "/images/logo.png"
+date_format: "%d/%m/%Y"
+read_time: true # reading time estimates, e.g. true
+words_per_minute: 200 # 200
+mathjax: true # MathJax equations, e.g. true
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
+google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+disqus:
+  shortname: neowaylabs # Disqus shortname, e.g. "my_disqus_shortname"
+twitter:
+  username: # site's Twitter username, e.g. "mmistakes"
+
+# Liquid
+liquid:
+  error_mode: strict
+
+# Build settings
+permalink: /:categories/:title/
+markdown: kramdown
+feed:
+  path: atom.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
+paginate_path: /page:num/
+
+# Search
+search_full_content: false
+
+# Taxonomy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  # Post defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comments: true
+      share: true
+  # Recipe defaults
+  - scope:
+      path: "_projects"
+      type: recipes
+    values:
+      layout: page
+      comments: true
+      share: true
+
+
+# Site Author
+author:
+  name: NeowayLabs
+  picture: /images/neoway.png
+  email: manoel.neto@neoway.com.br
+  links:
+      - title: GitHub
+        url: https://github.com/NeowayLabs
+        icon: fab fa-github-square
+      - title: Business WebSite
+        url: https://neoway.com.br
+        icon: fas fa-book
+
+# Footer Links
+footer_links:
+  - title: GitHub
+    url: https://github.com/NeowayLabs
+    icon: fab fa-github-square
+  - title: Business WebSite
+    url: https://neoway.com.br
+    icon: fas fa-book
