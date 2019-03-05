@@ -1,3 +1,5 @@
+DOCKER_IMG = neowaylabs
+
 all: serve
 
 install:
@@ -12,3 +14,10 @@ serve: install
 
 clean:
 	rm -rfv _site vendor
+
+
+docker-run:
+	docker run -it --rm --network=host $(DOCKER_IMG)
+
+docker-build:
+	docker build -t $(DOCKER_IMG) .
