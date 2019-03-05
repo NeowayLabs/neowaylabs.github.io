@@ -47,7 +47,7 @@ lborguetti:
         icon: fab fa-github-square
 
 tiago4orion:
-  name: Luciano Antonio Borguetti Faustino
+  name: Tiago Natel De Moura
   picture: /images/authors/tiago4orion.jpg
   links:
       - title: GitHub
@@ -55,7 +55,7 @@ tiago4orion:
         icon: fab fa-github-square
 
 rzanato:
-  name: Luciano Antonio Borguetti Faustino
+  name: Rodrigo Zanato Tripodi
   picture: /images/authors/rzanato.jpg
   links:
       - title: GitHub
@@ -63,7 +63,7 @@ rzanato:
         icon: fab fa-github-square
 
 m0nad:
-  name: Luciano Antonio Borguetti Faustino
+  name: Victor Ramos Mello
   picture: /images/authors/m0nad.jpg
   links:
       - title: GitHub
