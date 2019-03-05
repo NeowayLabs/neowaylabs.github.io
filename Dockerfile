@@ -19,6 +19,7 @@ RUN gem install bundler
 # Application
 WORKDIR /app
 COPY . .
+RUN apt-get install git -y
 RUN bundle install --path vendor/bundle
 EXPOSE 4000
 
