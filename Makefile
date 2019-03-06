@@ -1,22 +1,23 @@
-.PHONY: build run clean
+DOCKER_IMG = neowaylabs
 
-DOCKER_IMAGE = jekyll
-WORK_DIR     = /srv/jekyll
-CURRENT_PATH = $(shell pwd)
-CURRENT_USER = $$USER
-CURRENT_UID  = $$UID
+all: serve
+
+install:
+	@if [ ! -d vendor ]; then \
+         bundle install --path vendor/bundle; \
+	     bundle add jekyll; \
+    fi
 
 
-build:
-ifeq ("$(wildcard Dockerfile)","")
-	sed "s@%USER%@$(CURRENT_USER)@g;s@%UID%@$(CURRENT_UID)@g" Dockerfile.template > Dockerfile
-endif
-	docker build --rm -t $(DOCKER_IMAGE) .
-
-run: build
-	docker run --rm -v $(CURRENT_PATH):$(WORK_DIR) -p 127.0.0.1:4000:4000 $(DOCKER_IMAGE)
+serve: install
+	bundle exec jekyll serve
 
 clean:
-	docker rmi $(DOCKER_IMAGE)
+	rm -rfv _site vendor
 
-all: run
+
+docker-run:
+	docker run -it --rm --network=host $(DOCKER_IMG)
+
+docker-build:
+	docker build -t $(DOCKER_IMG) .

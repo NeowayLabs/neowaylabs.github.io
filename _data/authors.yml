@@ -1,0 +1,71 @@
+# Authors
+
+manoel_vilela:
+  name: Manoel Vilela
+  picture: /images/authors/manoel_vilela.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/ryukinix
+        icon: fab fa-github-square
+      - title: Blog
+        url: https://lerax.me
+        icon: fas fa-book
+      - title: Reddit
+        url: https://www.reddit.com/user/ryukinix
+        icon: fab fa-reddit
+
+katcipis:
+  name: Tiago Katcipis
+  picture: /images/authors/katcipis.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/katcipis
+        icon: fab fa-github-square
+
+boechat107:
+  name: André Boechat
+  picture: /images/authors/boechat107.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/boechat107
+        icon: fab fa-github-square
+
+cadicallegari:
+  name: Claudinei Callegari
+  picture: /images/authors/cadicallegari.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/cadicallegari
+        icon: fab fa-github-square
+
+lborguetti:
+  name: Luciano Antonio Borguetti Faustino
+  picture: /images/authors/lborguetti.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/lborguetti
+        icon: fab fa-github-square
+
+tiago4orion:
+  name: Tiago Natel De Moura
+  picture: /images/authors/tiago4orion.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/tiago4orion
+        icon: fab fa-github-square
+
+rzanato:
+  name: Rodrigo Zanato Tripodi
+  picture: /images/authors/rzanato.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/rzanato
+        icon: fab fa-github-square
+
+m0nad:
+  name: Victor Ramos Mello
+  picture: /images/authors/m0nad.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/m0nad
+        icon: fab fa-github-square
