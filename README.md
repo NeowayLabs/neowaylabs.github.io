@@ -2,27 +2,37 @@
 
 Neoway Tech-Blog.
 
-
 # Posts
 
-To write a new post, create a file in mardown inside of `_posts` dir.
+To write a new post, create a file in markdown inside of `_posts` dir.
 For projects pages, put on `_projects`.
 
+# Running
 
-# Executando localmente
+Requirements:
 
-Requisitos:
+* Docker
 
-+ Ruby
-+ Ruby-bundler
-+ GNU Make
+After installing Docker just run:
 
-Quando todos requisitos foram respeitados, execute o site com o
-seguinte comando na raíz do projeto:
+```
+make blog
+```
+
+And the blog should be available at 127.0.0.1:4000.
+
+# Running on host
+
+Requirements:
+
+* Ruby
+* Ruby-bundler
+* GNU Make
+
+After installing the dependencies just run:
 
 ``` bash
 make serve
 ```
 
-Isso irá instalar todas as dependências necessárias de Ruby +
-Jekyll. O site estará disponível em 127.0.0.1:4000.
+The blog should be available at 127.0.0.1:4000.
