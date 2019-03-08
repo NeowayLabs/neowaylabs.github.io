@@ -5,7 +5,26 @@ Neoway Tech-Blog.
 # Posts
 
 To write a new post, create a file in markdown inside of `_posts` dir.
-For projects pages, put on `_projects`.
+For projects pages, put the file on `_projects`.
+
+A template of header for post it is something like this:
+
+```---
+author: super_programmer
+title: "Why NLP is so Awesome?"
+categories:
+  - programming
+tags:
+  - nlp
+  - machine-learning
+excerpt:  "A report about the process of applying NLP to Neoway models"
+---
+```
+
+But you are not a author yet? Create your profile [here][authors] too and make a [Pull Request][pr]!
+
+[authors]: https://github.com/NeowayLabs/neowaylabs.github.io/blob/master/_data/authors.yml
+[pr]: https://help.github.com/en/articles/about-pull-requests
 
 # Running
 
