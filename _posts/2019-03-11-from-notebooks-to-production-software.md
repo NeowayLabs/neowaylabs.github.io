@@ -18,7 +18,7 @@ excerpt:  "Personal experience on learning software development as a 'data scien
 
 In the beginning I thought I knew how to code. I knew some OOP and a good amount of Python (although nothing impressive) and I could get things done with a rudimentary glue code. It was never anything amazing, but it worked and I could train models, perform experiments and predict some data as it came in.
 
-Most of my work was prototyped locally in a Jupyter Notebook and I never thought much of how of it I should put into  production, if there was reproducibility, if code review was ensured and so on. And at other times the main bulk of the code remained in the notebook and was never made into a proper project until told otherwise.
+Most of my work was prototyped locally in a Jupyter Notebook and I never thought much on how I should put any of it into production, if there was reproducibility, if code review was ensured and so on. And at other times the main bulk of the code remained in the notebook and was never made into a proper project until told otherwise.
 
 Then I had my first experience putting a Machine Learning model I've made into production and it was quite a ride! The code review was awesome because the senior developers really took their time and pointed out every single inconsistency, mistake, formatting issues and even architectural flaws. I believed that for them going through the messy “notebook turned into project” was more than nightmarishly, but for me their feedback and code review was eye opening.
 
