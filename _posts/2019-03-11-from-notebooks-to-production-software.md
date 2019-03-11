@@ -4,8 +4,8 @@ title: "From Notebooks to Production Software"
 categories:
   - programming
 tags:
-  - data_science
-  - software_development
+  - data-science
+  - software-development
 excerpt:  "Personal experience on learning software development as a 'data scientist'."
 ---
 
