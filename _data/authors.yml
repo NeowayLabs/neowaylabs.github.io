@@ -69,3 +69,12 @@ m0nad:
       - title: GitHub
         url: https://github.com/m0nad
         icon: fab fa-github-square
+
+gbnatti92:
+  name: Gabriel Benatti Alvim
+  picture: /images/authors/gbenatt92.jpg
+  links:
+      - title: GitHub
+        url: https://github.com/gbenatt92
+        icon: fab fa-github-square
+                                       
