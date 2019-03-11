@@ -9,7 +9,8 @@ For projects pages, put the file on `_projects`.
 
 A template of header for post it is something like this:
 
-```---
+```
+---
 author: super_programmer
 title: "Why NLP is so Awesome?"
 categories:
