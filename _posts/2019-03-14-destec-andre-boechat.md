@@ -15,7 +15,7 @@ excerpt: Uma entrevista com André Boechat conduzida por Eduardo Bellani.
 
 Neste episódio de 10 de março de 2018, [Eduardo Bellani] lança seu
 primeiro podcast da série com nome de _Destec_: um podcast sobre
-software e tecnologia elsm Florianópolis.
+software e tecnologia em Florianópolis.
 
 O tópico principal dessa vez será uma conversa descontraída com [André
 Boechat], programador especializado em Inteligência Artificial e um dos
