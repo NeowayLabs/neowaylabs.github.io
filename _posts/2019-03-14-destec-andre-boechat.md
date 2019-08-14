@@ -1,5 +1,5 @@
 ---
-title: "[podcast] André Boechat e Eduardo Bellani"
+title: "[podcast] André Boechat and Eduardo Bellani"
 image:
     path: /images/posts/floripa-ilha.jpg
     thumbnail: /images/posts/floripa-ilha.jpg
@@ -10,17 +10,15 @@ tags:
   - podcast
   - datascience
   - neoway
-excerpt: Uma entrevista com André Boechat conduzida por Eduardo Bellani.
+excerpt: "[Portuguese only] An interview with André Boechat conducted by Eduardo Bellani."
 ---
 
-Neste episódio de 10 de março de 2018, [Eduardo Bellani] lança seu
-primeiro podcast da série com nome de _Destec_: um podcast sobre
-software e tecnologia em Florianópolis.
+On march 10th, 2018, [Eduardo Bellani] launches his podcast-series' pilot named
+ _Destec_: a podcast about software and technology in Florianópolis.
 
-O tópico principal dessa vez será uma conversa descontraída com [André
-Boechat], programador especializado em Inteligência Artificial e um dos
-principais contribuidores do time de Machine Learning da área de Data
-Analytics da Neoway / Florianópolis.
+The main topic is a lighthearted chat with [André Boechat], software engineer
+specialized in Artifitial Inteligence and one of the principal developers on the 
+Machine Learning team of the Data Analytics area of Neoway Florianópolis.
 
 <iframe src="https://anchor.fm/destec/embed/episodes/Andr-Boechat-e3e3nq/a-abhsp1"
         height="102px"
@@ -29,9 +27,8 @@ Analytics da Neoway / Florianópolis.
         scrolling="no">
 </iframe>
 
-Importante citar que [Eduardo Bellani] também foi um dos nossos
-contribuidores! E um muito bom!
-
+Important to remember that [Eduardo Bellani] was a Neoway colaborator who did great
+contribuitions to the company.
 
 [Eduardo Bellani]: https://www.linkedin.com/in/eduardo-bellani/
 [André Boechat]: https://www.linkedin.com/in/boechat107/
