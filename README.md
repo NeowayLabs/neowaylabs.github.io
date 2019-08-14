@@ -36,6 +36,7 @@ Requirements:
 After installing Docker just run:
 
 ```
+make image
 make blog
 ```
 
