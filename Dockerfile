@@ -7,6 +7,7 @@ RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
+ENV JEKYLL_ENV dev
 
 # Ruby + Jekyll dependencies
 RUN apt-get update && \

@@ -10,7 +10,7 @@ install-deps:
     fi
 
 blog: 
-	docker run -it --rm --network=host $(DOCKER_VOLUME_ARGS) $(DOCKER_IMG)
+	docker run -it --rm --network=host -e JEKYLL_ENV='dev' $(DOCKER_VOLUME_ARGS) $(DOCKER_IMG)
 
 image:
 	docker build -t $(DOCKER_IMG) .
