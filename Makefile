@@ -1,4 +1,5 @@
 DOCKER_IMG = neowaylabs
+DOCKER_VOLUME_ARGS = -v ${PWD}/images:/app/images -v ${PWD}/_posts:/app/_posts/
 
 all: serve
 
@@ -8,8 +9,8 @@ install-deps:
 	     bundle add jekyll; \
     fi
 
-blog: image
-	docker run -it --rm --network=host $(DOCKER_IMG)
+blog: 
+	docker run -it --rm --network=host $(DOCKER_VOLUME_ARGS) $(DOCKER_IMG)
 
 image:
 	docker build -t $(DOCKER_IMG) .
