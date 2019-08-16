@@ -1,5 +1,5 @@
 ---
-author: mfrata 
+author: mfrata
 title: "Neoway's Feature Framework"
 image:
   path: /images/posts/neoways-feature-framework/blog_poster.png
@@ -26,9 +26,9 @@ There are more than 700 entities that are processed periodically and are stored 
 
 
 <figure class="align-center">
-  <img src="{{ '/images/posts/neoways-feature-framework/features_store.png' | absolute_url }}" alt="">
+  <img src="/images/posts/neoways-feature-framework/features_store.png" alt="">
   <figcaption>The Features Store is a subset of our data lake.</figcaption>
-</figure> 
+</figure>
 
 
   The framework is cloud-agnostic but it currently requires provisioning of cluster management and other supporting tools for scheduling and serving. These tools, generally, are offered by a cloud provider. They can simplify the task of infrastructure handling.
@@ -38,9 +38,9 @@ There are more than 700 entities that are processed periodically and are stored 
 The main component of the framework is the **Features Builder**. It is an extensible framework for features development, where they are logically organized by domains with a specific primary key.
 
 <figure class="align-center">
-  <img src="{{ '/images/posts/neoways-feature-framework/features_builder.png' | absolute_url }}" alt="">
+  <img src="/images/posts/neoways-feature-framework/features_builder.png" alt="">
   <figcaption>Features Builder and two domains flow.</figcaption>
-</figure> 
+</figure>
 
 
 The Features Builder is built with [PySpark](http://spark.apache.org/docs/latest/api/python/index.html) since it provides a nice trade-off between convenience and scalability. In other words, we can deal with a high volume of data because of Apache Spark while being easy to our Data Scientists to create new features since Python is a language with great readability and low barrier to entry.
@@ -88,9 +88,9 @@ def test_sceneario_with_feature_two(sparksession_fixture, ...):
 The real value of the Builder and the Store only comes when our stakeholders are making use of the features. However, accessing a storage bucket on the cloud is not the best way to achieve that. To solve this, we developed a high-level layer to access those: the **Features Selector**.
 
 <figure class="align-center">
-  <img src="{{ '/images/posts/neoways-feature-framework/features_selector.png' | absolute_url }}" alt="">
+  <img src="/images/posts/neoways-feature-framework/features_selector.png" alt="">
   <figcaption>Data access for statistical analysis and modeling.</figcaption>
-</figure> 
+</figure>
 
 
 The **Selector** is a Python package that can be easily imported on the data scientists' notebooks. It provides a catalog to view history, files, schema, features list and more importantly: to get a complete dataset of features, including their history, to use for  statistical analysis and modeling. We automated the serving of clusters and integrated that into our modeling workbench template (more about it on a future blog post), allowing our Data Scientist to work with Big Data. Therefore, Pyspark is key library to the **Selector**. The code snippet below shows just how easy it is to generate a training dataset using it.
@@ -107,7 +107,7 @@ The **Selector** is a Python package that can be easily imported on the data sci
 >>> domain_features.schema()
 >>> # {'feature_one': type, "feature_two": type, ...}
 
->>> # User passes timestamps and features 
+>>> # User passes timestamps and features
 >>> df = (domain_features
 ...      .get_features('t', 't-1')
 ...      .select('pkey', 'feature_one', ..., 'feature_N'))
@@ -119,12 +119,12 @@ The **Selector** is a Python package that can be easily imported on the data sci
 At first, the Features Framework was aimed to solve our internal scalability challenges. As it grew we saw the potential that it could bring also to our clients. We proved our hypothesis using the Selector to deliver the features to our customers. Nonetheless, someone still had to stop and do the job of generating them. Meaning that it would not scale well. That led to our external way of serving it: the **Features API**.
 
 <figure class="align-center">
-  <img src="{{ '/images/posts/neoways-feature-framework/features_api.png' | absolute_url }}" alt="">
+  <img src="/images/posts/neoways-feature-framework/features_api.png" alt="">
   <figcaption>Data access for customers (RESTfull).</figcaption>
-</figure> 
+</figure>
 
 
-The API is a service written in Golang that provides a low latency interface for features consumption and also has built-in security and billing capabilities provided by our Platform team. A key aspect is that we only include features that we use and have a proven value in real world applications. As it turns out, those features are also bringing results to our clients in many segments such as finance, insurance, recovery, retail, consumer goods and many others. Before requesting the features, the client can access its metadata as well as the timestamps available. 
+The API is a service written in Golang that provides a low latency interface for features consumption and also has built-in security and billing capabilities provided by our Platform team. A key aspect is that we only include features that we use and have a proven value in real world applications. As it turns out, those features are also bringing results to our clients in many segments such as finance, insurance, recovery, retail, consumer goods and many others. Before requesting the features, the client can access its metadata as well as the timestamps available.
 
 
 # Let’s talk about data quality
@@ -132,15 +132,15 @@ The API is a service written in Golang that provides a low latency interface for
 Until now we saw all the value of the Features Framework can create. But how do we ensure quality? You’ve guessed it: **Features Monitor**.
 
 <figure class="align-center">
-  <img src="{{ '/images/posts/neoways-feature-framework/features_monitor.png' | absolute_url }}" alt="">
+  <img src="/images/posts/neoways-feature-framework/features_monitor.png" alt="">
   <figcaption>Monitor checks for statistics of our features.</figcaption>
-</figure> 
+</figure>
 
 
 The Monitor runs after the Builder’s calculation is complete. It has two main objectives: to check for simple quality **descriptive statistics** and the **diff statistics** related to the previous timestamps.
-  
+
 The descriptive statistics is delivered in a json format with summary information such as null index, number of rows, distribution, mean, standard deviation and others depending on the type of the feature. Moreover, it also includes some warnings to highlight dreadful variables. The warnings are triggered  when an attribute is all null or NaN, if it has low variability, or it is constant.
-  
+
 The diff statistics looks for changes in the schema, and the rate of change of the features’ distributions triggering a warning if it surpasses a certain threshold. This mechanism enables our team to audit this feature and trace the root cause of the change in the data.
 
 {% highlight python %}
@@ -172,7 +172,7 @@ The diff statistics looks for changes in the schema, and the rate of change of t
 
 <figure class="align-center">
   <figcaption>Example of Features Monitor report.</figcaption>
-</figure> 
+</figure>
 
 
 # Le grand orchestrateur
@@ -180,9 +180,9 @@ The diff statistics looks for changes in the schema, and the rate of change of t
 All of the components above are crucial parts of the framework. Yet there is another hidden component that plays a big role in the features’ calculations. We’re talking about the orchestrator, the scheduler. We’re talking about [Apache Airflow](https://airflow.apache.org/).
 
 <figure class="align-center">
-  <img src="{{ '/images/posts/neoways-feature-framework/features_framework.png' | absolute_url }}" alt="">
+  <img src="/images/posts/neoways-feature-framework/features_framework.png" alt="">
   <figcaption>All the components of the Features Framework.</figcaption>
-</figure> 
+</figure>
 
 
 Airflow is a platform that is used to schedule and monitor workflows. You can code a directed acyclic graph (DAG) which executes a set of tasks determined as desired. These tasks can vary from a simple bash command, a python code abstract in a container, a connection with the cloud and etc. And all of them can be done using Operators whose main responsibility is to provide abstractions to build DAGs with ease.
@@ -200,4 +200,3 @@ So should you invest in your Features Framework at your company? It depends on t
 
 *Special thanks to all people involved on the development of this framework: [Andre Boechat](https://www.linkedin.com/in/boechat107/), [Breno Costa](https://www.linkedin.com/in/breno-c-costa/), [Gabriel Alvim](https://www.linkedin.com/in/gabriel-benatti-alvim-520b69a2/), [Igor Cortez](https://www.linkedin.com/in/igor-cortez-56793825/), [Luis Pelison](https://www.linkedin.com/in/luis-felipe-pelison-243791107/), and [Manoel Vilela](https://www.linkedin.com/in/lerax/).*
 {: .notice}
-
