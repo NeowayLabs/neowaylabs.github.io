@@ -88,3 +88,11 @@ mfrata:
       - title: LinkedIn
         url: https://www.linkedin.com/in/matheus-frata
         icon: fab fa-linkedin
+
+yurivs:
+    name: Yuri Vendruscolo da Silveira
+    picture: /images/authors/yurivs.jpg
+    links:
+      - title: GitHub
+        url: https://github.com/yvendruscolo
+        icon: fab fa-github-square
