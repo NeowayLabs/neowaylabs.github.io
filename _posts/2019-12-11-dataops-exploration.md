@@ -62,4 +62,4 @@ As one can see, just models don't add up to a complete data analytics pipeline. 
 
 # How are we doing?
 
-Is that too much? We are a 2 person squad (for now, stay tuned: we are looking forward to bump those numbers during 2020), and most of the needs from the dozen Data Scientists and Machine Learning Engineers in our team get to be covered in a reasonable time, while keeping exploration and innovation alive, however, we could use some extra hand to take more projects out of the realm of ideas. So for us, technological diversity seems to be going hand in hand with our continuous improvements.
+Is that too much? We are a small squad (for now, stay tuned: we are looking forward to bump those numbers during 2020), and most of the needs from the larger Data Science and Machine Learning squads in our team get to be covered in a reasonable time, while keeping exploration and innovation alive, however, we could use some extra hand to take more projects out of the realm of ideas. So for us, technological diversity seems to be going hand in hand with our continuous improvements.
