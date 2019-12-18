@@ -17,7 +17,7 @@
 
 locale: en-US
 title: "NeowayLabs"
-description: "There's more to learn."
+description: "More knowing, more doing."
 # baseurl: / # the subpath of your site, e.g. "/blog"
 url: https://neowaylabs.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: /images/neoway.png # path of site logo, e.g. "/images/logo.png"
