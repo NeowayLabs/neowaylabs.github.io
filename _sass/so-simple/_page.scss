@@ -25,14 +25,6 @@
   margin-bottom: 2em;
   z-index: 1;
 
-  @include breakpoint($medium) {
-    margin-top: (-1.5 * $site-logo-height) / 2;
-  }
-
-  @include breakpoint($large) {
-    margin-top: (-2 * $site-logo-height) / 2;
-  }
-  
   img {
     width: 100%;
   }
