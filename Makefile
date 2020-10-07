@@ -9,8 +9,11 @@ install-deps:
 	     bundle add jekyll; \
     fi
 
-blog: 
-	docker run -it --rm --network=host -e JEKYLL_ENV='dev' $(DOCKER_VOLUME_ARGS) $(DOCKER_IMG)
+blog:
+	docker run -it --rm \
+	       --network=host \
+           -e JEKYLL_ENV='dev' \
+           $(DOCKER_VOLUME_ARGS) $(DOCKER_IMG)
 
 image:
 	docker build -t $(DOCKER_IMG) .
@@ -21,3 +24,4 @@ serve: install-deps
 clean:
 	rm -rfv _site vendor
 
+run: image blog
