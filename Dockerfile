@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:bullseye
 
 # Locale stuff
 RUN apt-get update && apt-get install locales -y
@@ -16,12 +16,16 @@ RUN apt-get update && \
     patch zlib1g-dev liblzma-dev \
     libxml2-dev libxslt-dev  -y
 RUN gem install bundler
+RUN apt-get install git -y
 
 # Application
 WORKDIR /app
-COPY . .
-RUN apt-get install git -y
+COPY Gemfile .
+COPY Gemfile.lock .
+COPY jekyll-theme-so-simple.gemspec .
 RUN bundle install --path vendor/bundle
+COPY . .
 EXPOSE 4000
-
+RUN gem update jekyll
+ENV RUBYOPT=-W0
 ENTRYPOINT ["bundle", "exec", "jekyll", "serve"]
