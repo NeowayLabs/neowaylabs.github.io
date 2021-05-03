@@ -328,5 +328,5 @@ Finally, it is also possible to observe that similar calculation approaches (whe
 
 
 
-*Authors: [Fernando Felix](https://www.linkedin.com/in/fernandofnjr/), [Igor Siqueira Cortez](https://www.linkedin.com/in/igor-cortez-56793825/), [Vitor Hugo Medeiros De Luca](https://www.linkedin.com/in/vitordeluca/)*
+*Authors: [Igor Siqueira Cortez](https://www.linkedin.com/in/igor-cortez-56793825/), [Vitor Hugo Medeiros De Luca](https://www.linkedin.com/in/vitordeluca/), [Fernando Felix](https://www.linkedin.com/in/fernandofnjr/)*
 {: .notice}
