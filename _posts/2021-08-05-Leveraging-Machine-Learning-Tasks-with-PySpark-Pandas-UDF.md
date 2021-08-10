@@ -9,8 +9,6 @@ excerpt: "Distributing Machine Learning Tasks using PySpark Pandas UDF"
 ---
 
 
-# Leveraging Machine Learning Tasks with PySpark Pandas UDF
-
 Experimenting is the word that best defines the daily life of a Data Scientist. To build a decent machine learning model for a given problem, a Data Scientist needs to train several models. This process includes tasks such as finding optimal hyperparameters to the model, cross-validate models using K-fold, and sometimes even train a model that has several outputs. All of those tasks mentioned before are time-consuming and nonetheless extremely important for the success of the model development. In this blog post, we're going to show how PySpark Pandas UDF, a framework used to distribute python functions on Spark clusters, can be applied to enhance the Data Scientist's daily productivity.
 
 # How does PySpark implement Pandas UDF (User Defined Function)?
@@ -668,14 +666,14 @@ df_numbers.toPandas()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" style="width:150px">
   <thead>
     <tr style="text-align: right;">
       <th></th>
       <th>replication_id</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody style="text-align: right;">
     <tr>
       <th>0</th>
       <td>0</td>
@@ -802,7 +800,7 @@ results.sort('accuracy', ascending=False).toPandas()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" style="width:200px">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -810,7 +808,7 @@ results.sort('accuracy', ascending=False).toPandas()
       <th>accuracy</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody style="text-align: right;">
     <tr>
       <th>0</th>
       <td>4</td>
@@ -1145,7 +1143,7 @@ results.sort('accuracy', ascending=False).limit(5).toPandas()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" style="width:200px">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1153,7 +1151,7 @@ results.sort('accuracy', ascending=False).limit(5).toPandas()
       <th>accuracy</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody style="text-align: right;">
     <tr>
       <th>0</th>
       <td>y_6</td>
@@ -1192,3 +1190,7 @@ In this post, we showed some examples of how PySpark Pandas UDF can be used to d
 We hope this can be useful and that you guys enjoyed the content. Please leave your comments and questions below.
 
 See you in the next post. That's all, folks.
+
+
+*Authors: [Igor Siqueira Cortez](https://www.linkedin.com/in/igor-cortez-56793825/), [Vitor Hugo Medeiros De Luca](https://www.linkedin.com/in/vitordeluca/), [Luiz Felipe Manke](https://br.linkedin.com/in/luizmanke/)*
+{: .notice}
