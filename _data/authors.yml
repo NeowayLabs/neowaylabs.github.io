@@ -89,6 +89,17 @@ mfrata:
         url: https://www.linkedin.com/in/matheus-frata
         icon: fab fa-linkedin
 
+brenocosta:
+  name: Breno Costa
+  picture: /images/authors/breno-costa.png
+  links:
+      - title: GitHub
+        url: https://github.com/breno-costa
+        icon: fab fa-github-square
+      - title: LinkedIn
+        url: https://www.linkedin.com/in/breno-c-costa
+        icon: fab fa-linkedin
+
 yurivs:
     name: Yuri Vendruscolo da Silveira
     picture: /images/authors/yurivs.jpg
