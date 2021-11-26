@@ -98,7 +98,7 @@ Let's see some examples of datasets in the Feature Store identified by type, pro
   <img src="/images/posts/neoways-feature-store/schema_identifier_1.png" alt="">
 </figure>
 
-The first dataset identifier example has a type `table` because it comes from a relational database, a provider `neoway` because it’s produced by the company’s default ingestion flow, and a name `company` because it contains data about companies.
+The first dataset identifier example has a type `table`. It comes from a relational database, a provider `neoway` because it’s produced by the company’s default ingestion flow, and a name `company` because it contains data about companies.
 
 <figure>
   <img src="/images/posts/neoways-feature-store/schema_identifier_2.png" alt="">
@@ -108,7 +108,7 @@ The second dataset identifier example has a type `model` because it’s an outpu
 
 ### JSON Schema
 
-The schemas must be registered using a valid [JSON schema](https://json-schema.org/) that contains schema properties (name, type, and description of each one), required properties, keys, description, and other custom attributes. JSON schema is a vocabulary that allows you to annotate and validate JSON documents, and it's a powerful tool for validating the structure of JSON data. We’re using it to validate backward compatibility.
+The schemas must be registered using a valid [JSON schema](https://json-schema.org/) that contains schema properties (name, type, and description of each one), required properties, keys, description, and other custom attributes. JSON Schema is a vocabulary that allows you to annotate and validate JSON documents, and it's a powerful tool for validating the structure of JSON data. We’re using it to validate backward compatibility.
 
 The first version of the schema just needs to be valid, but when a schema is updated it has to be backward compatible to ensure that its dependencies are not broken. The topics below should be guaranteed for the second and next versions of the schema.
 
@@ -162,7 +162,7 @@ Some conventions that must be followed:
 
 The schema is available in the catalog soon after being registered.
 
-Once the schema is registered, you can ingest data frames into the Feature Store. You can use the method `fs.ingest()` to ingest a data frame into the feature store. The ingestion method is performed in three steps: 1) write data frame to data lake, 2) insert into feature store database, and 3) update catalog instance.
+Once the schema is registered, you can ingest data frames into the Feature Store. You can use the method `fs.ingest()` to ingest a data frame into the feature store. The ingestion method is performed in three steps: 1) write data frame to the data lake, 2) insert into feature store database, and 3) update catalog instance.
 
 ### Publish
 
@@ -253,11 +253,11 @@ def expect(df: ExpectationsDataset):
     df.expect_column_min_to_be_between("partnersCount", min_value=0, max_value=100)
 ```
 
-We've moved from an approach using unit tests to an new approach using data tests to make it easier to add features without putting the quality aside. Using the traditional software engineering unit tests for feature code discourages data scientists from using the tool to contribute with new features. For this purpose, we've adopted [Great Expectations](https://greatexpectations.io/) to run the quality pipeline successfully.
+We've moved from an approach using unit tests to a new approach using data tests to make it easier to add features without putting the quality aside. Using the traditional software engineering unit tests for feature code discourages data scientists from using the tool to contribute with new features. For this purpose, we've adopted [Great Expectations](https://greatexpectations.io/) to run the quality pipeline successfully.
 
 ### CI/CD pipeline 
 
-The project uses a CI/CD pipeline for running the features pipelines on three different branch types: feature, develop, and master branches. The pipeline includes default tasks to build, lint, and test project code, but it also includes feature pipeline steps such as to run expectations test, register schemas, ingest file to the data lake, publish dataset to Kafka.
+The project uses a CI/CD pipeline for running the features pipelines on three different branch types: feature, develop, and master branches. The pipeline includes default tasks to build, lint, and test project code, but it also includes feature pipeline steps such as running expectations test, registering schemas, ingesting files to the data lake, publishing datasets to Kafka.
 
 |         | build | lint | tests | transform | expectations | register | ingest | publish |
 |---------|-------|------|-------|-----------|--------------|----------|--------|---------|
@@ -265,10 +265,10 @@ The project uses a CI/CD pipeline for running the features pipelines on three di
 | develop |   x   |   x  |   x   |     x     | x            |  dry-run |        |         |
 | master  |   x   |   x  |   x   |     x     | x            |     x    |    x   |    x    |
 
-The [Airflow](https://airflow.apache.org/) is being used to schedule and run pipeline on production. Both CI/CD runner and Airflow is responsible to launch spark jobs to a Kubernetes cluster, and this makes our pipeline highly scalable.
+The [Airflow](https://airflow.apache.org/) is being used to schedule and run the pipeline on production. Both CI/CD runner and Airflow are responsible to launch spark jobs to a Kubernetes cluster, and this makes our pipeline highly scalable.
 
 ## Conclusion
 
 Neoway's Feature Store has brought several benefits to the company's teams. The curated catalog has provided good data governance for the datasets, increasing data quality and improving security. Python SDK has simplified many complex tasks like interacting with other platform components, and this reduces time to develop data science models. Code rewriting has been reduced between development and production environments because professionals are using the same tools for both. 
 
-One of the consequences of those benefits is that we're seeing other teams outside the data science domain wanting to use the Python SDK to be more efficient to deliver solutions for the customers. On the other hand, some customers are realizing value in the features created in the Feature Store and paying for it to use in their data science models.
+One of the consequences of those benefits is that we're seeing other teams outside the data science domain wanting to use the Python SDK to be more efficient to deliver solutions for the customers. On the other hand, some customers are realizing value in the features created in the Feature Store and paying for them to use in their data science models.
