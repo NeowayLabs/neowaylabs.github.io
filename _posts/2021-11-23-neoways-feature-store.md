@@ -72,15 +72,11 @@ The proposed architecture allows two kinds of feature serving: 1) offline servin
   <img src="/images/posts/neoways-feature-store/feature_store_architecture2.jpg" alt="">
 </figure>
 
-The main internal components are described below.
+The main Feature Store's architectural component is the Python SDK, because it provides user-friendly functions that allow performing the functions above mentioned (register, read, ingest, and publish). It was developed thinking on the developer experience and continues to be improved according to user feedback. The Python SDK can be used in interactive environments such as Jupyter Notebooks or any python applications. 
 
-* Indexer: data lake indexer that uses rules configured using types and providers to scan buckets and to catalog files found in the feature store
-* PostgreSQL: a database that contains information from the catalog, such as the registered schemas, properties and metadata, and the indexed file paths
-* REST API: service that exposes some useful endpoints for the SDK to perform operations
-* SDK: user-friendly Python SDK that allows you to perform operations in interactive environments or scheduled applications
-* Transformers: service to automate the generation of features on production
+For the SDK to work properly, we create some internal components. REST API is a service that exposes some useful endpoints for the SDK to perform operations. PostgreSQL is a database that contains information from the catalog, such as the registered schemas, properties and metadata, and the indexed file paths.  Indexer is connected to the data lake to scan buckets and to catalog new files found on the database.
 
-This architecture can be easily extended to attend new use cases such as near real-time prediction using Kafka and Spark Streaming for generating stream features, but our business context still does not demand this type of feature serving.
+Finally, Transformers is a service for automating feature generation. It allows data scientists to code feature functions, make some simple configurations and run them on production easily without knowing anything about infrastructure. It also uses the Python SDK and benefits from the implemented functions. This component can be easily extended to attend new use cases such as near real-time prediction using Kafka and Spark Streaming for generating stream features, but our business context still does not demand this type of feature serving.
 
 ## Schema Rules Everything
 
