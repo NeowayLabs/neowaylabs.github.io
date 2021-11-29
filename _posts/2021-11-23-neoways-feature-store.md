@@ -217,7 +217,7 @@ def transform(catalog: Catalog) -> DataFrame:
 
 Note the developer doesn't need to know anything about infrastructure provisioning.
 
-#### configuration.json
+#### config.json
 
 The JSON configuration file contains fields that are used by the register method. The developer must inform schema identifier (schema type, provider, and name), as schema fields (description, key, field descriptions).
 
