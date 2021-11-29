@@ -150,23 +150,13 @@ Let's see an example of how to use a dataset to make a simple transformation and
 
 ![register ingest](/images/posts/neoways-feature-store/fs_register_ingest.gif)
 
-The schema of the transformed data frame is used to generate the JSON schema and to register on Neoway's schema registry.
+The schema of the transformed data frame is used to generate the JSON schema and to register on Neoway's schema registry. The schema is available in the catalog soon after being registered.
 
-Some conventions that must be followed:
-
-* Field names must be in Portuguese
-* Field names must use camel case (eg. cnpj, partnersCount)
-* Schema type cannot exceed 8 characters
-* Schema provider cannot exceed 10 characters
-* Schema name cannot exceed 38 characters
-
-The schema is available in the catalog soon after being registered.
-
-Once the schema is registered, you can ingest data frames into the Feature Store. You can use the method `fs.ingest()` to ingest a data frame into the feature store. The ingestion method is performed in three steps: 1) write data frame to the data lake, 2) insert into feature store database, and 3) update catalog instance.
+Once the schema is registered, you can ingest data frames into the Feature Store. You can use the method `fs.ingest()` to ingest a data frame into the feature store. This method is performed in three steps: 1) write data frame to the data lake, 2) insert into feature store database, and 3) update catalog instance.
 
 ### Publish
 
-A data frame that was previously ingested can be published to the Datahub, and data will be available for consumers such as ElasticSearch, MongoDB, Neo4j, Big Query, and so on.
+A data frame that was previously ingested can be published to the Kafka, and data will be available for consumers such as ElasticSearch, MongoDB, Neo4j, Big Query, and so on.
 
 ![publish](/images/posts/neoways-feature-store/fs_publish.gif)
 
