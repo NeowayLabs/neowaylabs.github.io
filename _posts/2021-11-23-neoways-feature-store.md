@@ -18,7 +18,7 @@ The data science practitioners write the feature creation source code in the git
 
 This ad hoc approach - where features are created as needed by projects - may work for teams that are starting or small teams that only have a few models to maintain. However, this approach becomes inefficient when the organization scales.
 
-The main problems caused by this approach were well explained in Lakshmanan's Machine Learning Design Patterns book and they can be summarized below.
+The main problems caused by this approach were well explained in [Lakshmanan's Machine Learning Design Patterns book](https://www.oreilly.com/library/view/machine-learning-design/9781098115777/) and they can be summarized below.
 
 * Lack of consistency: divergence of the features in dev and prod, and challenges to deploy models in production. In many cases, data scientists need a different team to build the ETL jobs that will make the data available in production to run the model.
 
@@ -51,7 +51,9 @@ All of the above-mentioned benefits come with the cost of maintaining a new comp
 
 In Neoway, we’ve developed an in-house Feature Store to make data scientists’ work easier during the model development either to discover datasets available for generating features or to create new feature datasets to be used on the models. [We have been developing tools for improving our feature pipelines since when the term ‘feature store’ was not popular](https://neowaylabs.github.io/data-science/neoways-feature-framework/) and that learning journey helped us in this new development.
 
-Our Feature Store is fully integrated with the data platform, and this allows the interaction with data capabilities to perform tasks very easily, such as reading files from and writing files to the data lake, registering schemas in the Schema API, producing data to Kafka, inserting records in PostgreSQL, indexing data in the Elastic Search and making them available to customers in company's SaaS and APIs. The diagram below shows how that integration works in practice.
+The company has a data platform that provides services to collect data from external sources, apply treatment functions to produce curated business entities, and make them available for consumer applications. The data platform components are a Schema Registry for improving data governance, a Data Lake for data storage, a Kafka for stream data, and data capabilities such as PostgreSQL as the relational database, BigQuery as the data warehouse, Elastic Search as the search engine and MongoDB as the fast storage for APIs and applications.
+
+Our Feature Store is fully integrated with the company's data platform, and this allows the interaction with data capabilities to perform tasks very easily, such as reading files from and writing files to the data lake, registering schemas in the Schema API, producing data to Kafka, inserting records in PostgreSQL, indexing data in the Elastic Search and making them available for customers in company's SaaS and APIs. The diagram below shows how that integration works in practice.
 
 <figure class="align-center">
   <img src="/images/posts/neoways-feature-store/feature_store_architecture.jpg" alt="">
