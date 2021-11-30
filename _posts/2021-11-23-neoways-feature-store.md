@@ -4,7 +4,10 @@ title: "Neoway's Feature Store"
 categories:
   - data-science
 tags:
+  - feature-store
+  - feature-engineering
   - pyspark
+  - python
 excerpt: "Feature Store"
 ---
 
@@ -28,7 +31,9 @@ The main problems caused by this approach were well explained in [Lakshmanan's M
 
 * Poor data governance: when there is no easy access in finding feature documentation to understand feature engineering details and dependencies, or to simply discover new features that can be used.
 
-In order to address those problems, the Feature Store is emerging as a new kind of ML-specific component. The main idea is to move part of the feature engineering pipeline from the model repositories to a centralized feature platform to store and document datasets that will be used in data science models across projects and teams.
+In order to address those problems, the Feature Store is emerging as a new kind of ML-specific component. Uber was the first company has mentioned the term feature store on its [blog post about Michelangelo platform](https://eng.uber.com/michelangelo-machine-learning-platform/). Recently that topic has been widely discussed in the data science, machine learning and mlops community. Some solutions have stood out such as [Tecton](https://www.tecton.ai/), [Feast](https://feast.dev/), [Hopsworks](https://www.hopsworks.ai/), [AWS's Feature Store](https://docs.aws.amazon.com/sagemaker/latest/dg/feature-store.html), [GCP's Feature Store](https://cloud.google.com/vertex-ai/docs/featurestore).
+
+The main idea is to move part of the feature engineering pipeline from the model repositories to a centralized feature platform to store and document datasets that will be used in data science models across projects and teams. 
 
 <figure class="align-center">
   <img src="/images/posts/neoways-feature-store/introduction_feature_store.jpg" alt="">
