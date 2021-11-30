@@ -31,7 +31,7 @@ The main problems caused by this approach were well explained in [Lakshmanan's M
 
 * Poor data governance: when there is no easy access in finding feature documentation to understand feature engineering details and dependencies, or to simply discover new features that can be used.
 
-In order to address those problems, the Feature Store is emerging as a new kind of ML-specific component. Uber first mentioned the term feature store on its [blog post about Michelangelo platform](https://eng.uber.com/michelangelo-machine-learning-platform/). Recently that topic has been widely discussed in the data science, machine learning and mlops community. Some solutions have stood out such as [Tecton](https://www.tecton.ai/), [Feast](https://feast.dev/), [Hopsworks](https://www.hopsworks.ai/), [AWS's Feature Store](https://docs.aws.amazon.com/sagemaker/latest/dg/feature-store.html), [GCP's Feature Store](https://cloud.google.com/vertex-ai/docs/featurestore).
+In order to address those problems, the Feature Store is emerging as a new kind of ML-specific component. Uber first mentioned the term feature store on its [blog post about Michelangelo platform](https://eng.uber.com/michelangelo-machine-learning-platform/). Recently that topic has been widely discussed in the data science, machine learning and MLOps community. Some solutions have stood out such as [Tecton](https://www.tecton.ai/), [Feast](https://feast.dev/), [Hopsworks](https://www.hopsworks.ai/), [AWS's Feature Store](https://docs.aws.amazon.com/sagemaker/latest/dg/feature-store.html), [GCP's Feature Store](https://cloud.google.com/vertex-ai/docs/featurestore).
 
 The main idea is to move part of the feature engineering pipeline from the model repositories to a centralized feature platform to store and document datasets that will be used in data science models across projects and teams. 
 
@@ -56,7 +56,7 @@ All of the above-mentioned benefits come with the cost of maintaining a new comp
 
 In Neoway, we’ve developed an in-house Feature Store to make data scientists’ work easier during the model development either to discover datasets available for generating features or to create new feature datasets to be used on the models. [We have been developing tools for improving our feature pipelines since when the term ‘feature store’ was not popular](https://neowaylabs.github.io/data-science/neoways-feature-framework/) and that learning journey helped us in this new development.
 
-The company has a data platform that provides services to collect data from external sources, apply treatment functions to produce curated business entities, and make them available for consumer applications. The data platform components are a Schema Registry for improving data governance, a Data Lake for data storage, a Kafka for stream data, and data capabilities such as PostgreSQL as the relational database, BigQuery as the data warehouse, Elastic Search as the search engine and MongoDB as the fast storage for APIs and applications.
+The company has a data platform that provides services to collect data from external sources, apply treatment functions to produce curated business entities, and make them available for consumer applications. The main data platform components are a Schema Registry for improving data governance, a Data Lake for offline data storage, a Kafka for data streaming, and data capabilities such as PostgreSQL as the relational database, BigQuery as the data warehouse, ElasticSearch as the search engine and MongoDB as the online and fast data storage for APIs and applications.
 
 Our Feature Store is fully integrated with the company's data platform, and this allows the interaction with data capabilities to perform tasks very easily, such as reading files from and writing files to the data lake, registering schemas in the Schema API, producing data to Kafka, inserting records in PostgreSQL, indexing data in the Elastic Search and making them available for customers in company's SaaS and APIs. The diagram below shows how that integration works in practice.
 
@@ -256,7 +256,7 @@ The project uses a CI/CD pipeline for running the features pipelines on three di
 | develop |   x   |   x  |   x   |     x     | x            |  dry-run |        |         |
 | master  |   x   |   x  |   x   |     x     | x            |     x    |    x   |    x    |
 
-The [Airflow](https://airflow.apache.org/) is being used to schedule and run the pipeline on production. Both CI/CD runner and Airflow are responsible to launch spark jobs to a Kubernetes cluster, and this makes our pipeline highly scalable.
+The [Airflow](https://airflow.apache.org/) is being used to schedule and run the pipeline on production. Both CI/CD runner and Airflow are responsible for launching spark jobs to a Kubernetes cluster, and this makes our pipeline highly scalable.
 
 ## Conclusion
 
