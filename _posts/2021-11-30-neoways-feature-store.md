@@ -216,7 +216,7 @@ The JSON configuration file contains fields that are used by the register method
 {
     "schema_type": "features",
     "schema_provider": "analytics",
-    "schema_name": "company-compliance-score",
+    "schema_name": "company-partners",
     "description": "Number of company partners",
     "key": ["cnpj"],
     "field_descriptions": {
