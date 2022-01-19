@@ -1,19 +1,14 @@
 ---
 author: brenocosta
-title: "The journey of creating the machine learning platform at Neoway"
+title: "Building the Neoway's Machine Learning Platform with product thinking"
 categories:
   - machine-learning
 tags:
-  - feature-store
-  - feature-engineering
-  - pyspark
-  - python
   - machine-learning
   - data-science
 excerpt: ""
 ---
 
-----
 - [Organizational Structure](#organizational-structure)
   - [On Team Topologies](#on-team-topologies)
   - [Redesigning our Teams](#redesigning-our-teams)
@@ -64,7 +59,7 @@ The **stream-aligned** and **platform** are the most fundamental team types in o
 The image below presents a very summarized view of some cells with which our machine learning platform team interacts the most.
 
 <figure>
-  <img src="/images/posts/journey-ml-platform/cells_overview.png" alt="">
+  <img src="/images/posts/neoways-ml-platform/cells_overview.png" alt="">
 </figure>
 
 The product and service cells are responsible for delivering value directly to the end customers. They need to be empowered to build and deliver customer value as quickly and independently as possible. Those cells are created to better serve the business domain requirements.
@@ -116,7 +111,7 @@ Our solutions are mainly used by data scientists working in stream-aligned cells
 The image below presents a summary of the components of our platform and the integration with other existing components in the company. We're responsible for providing the blue components in the figure. The yellow and green components are provided by the data platform. Our team is both a consumer and contributor to the internal data platform components.
 
 <figure>
-  <img src="/images/posts/journey-ml-platform/ml_overview.png" alt="">
+  <img src="/images/posts/neoways-ml-platform/ml_overview.png" alt="">
 </figure>
 
 Data pipelines are created to prepare the raw data that is produced by other applications in a structured format to be used by data science tasks. Every dataset schema is registered and it’s available to users in an organized way for easy discovery and reading.
@@ -178,7 +173,7 @@ We talked in some user interviews about the [features framework](https://neowayl
 We used a simple description of [proto-personas](https://www.nngroup.com/articles/persona-types/) to describe who are the current and future users of our platform. The image below presents a brief description of some characteristics to clarify it.
 
 <figure>
-  <img src="/images/posts/journey-ml-platform/product_proto_personas.png" alt="">
+  <img src="/images/posts/neoways-ml-platform/product_proto_personas.png" alt="">
 </figure>
 
 Proto-personas give an insight into the characteristics of users, which guide the team to make good decisions in an empathetic way during the software design and development.
@@ -196,7 +191,7 @@ User story map defines 3 types of actions:
 The image below shows an example of our initial user story map.
 
 <figure>
-  <img src="/images/posts/journey-ml-platform/product_user_story_map.png" alt="">
+  <img src="/images/posts/neoways-ml-platform/product_user_story_map.png" alt="">
 </figure>
 
 One of the benefits after [making a user story map](https://www.oreilly.com/library/view/user-story-mapping/9781491904893/) is to have a systematic understanding of the user journey in a single page.
