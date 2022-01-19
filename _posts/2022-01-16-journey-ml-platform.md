@@ -59,7 +59,7 @@ The book authors propose to apply a kind of reverse engineering of Conway’s la
 
 The organizational structure was changed by choosing business domains to focus on and creating teams to maximize the software delivery to our customers on those domains. The functional teams were changed to cross-functional units of work named **cells**. They are small units of delivery that work collaboratively.
 
-The **stream-aligned** and **platform** are the most fundamental team types in our company. Stream-aligned teams have a continuous flow of work aligned to a business domain. They need to be empowered to deliver customer value as quickly and independently as possible. Platform teams provide internal services to reduce the complexity for the stream-aligned teams during software development and delivery.
+The **stream-aligned** and **platform** are the most fundamental team types in our company. Stream-aligned teams have a continuous flow of work aligned to a business domain. Platform teams provide internal services to reduce the complexity for the stream-aligned teams during software development and delivery.
 
 The image below presents a very summarized view of some cells with which our machine learning platform team interacts the most.
 
@@ -69,29 +69,29 @@ The image below presents a very summarized view of some cells with which our mac
 
 The product and service cells are responsible for delivering value directly to the end customers. They need to be empowered to build and deliver customer value as quickly and independently as possible. Those cells are created to better serve the business domain requirements.
 
-On the other hand, the platform cells have two main responsibilities. The first is to simplify the use of complex technologies that require a high level of specialization, such as Kubernetes, spark clusters, distributed systems, data lake, streaming platform, IAM, security, data warehouses, search engines. The list doesn't finish here.
+On the other hand, the platform cells have two responsibilities. The first one is to simplify the use of complex technologies that require a high level of specialization, such as Kubernetes, Spark clusters, distributed systems, data lake, streaming platform, IAM, security, data warehouses, search engines. The list goes on.
 
-The second responsibility is to prevent business cells from starting to build multiple solutions for solving the same problems. When a common problem arises for several people, platform cells act to create a single solution that solves the problem more efficiently thinking in the long term.
+The second responsibility is to prevent business cells from building multiple solutions for solved problems across the company. When a problem that is common for several teams pop up, the platform cells act to create a single solution that solves the problem more efficiently thinking in the long term.
 
 ## Interaction Between Teams
 
-The types of interaction vary according to the maturity of teams and the maturity of solutions provided by them. We've seen the three types of communication mentioned in the Team Topologies book happen with frequency.
+The types of interaction can vary according to the maturity of teams and the maturity of solutions provided by them. We've seen the three types of communication mentioned in the Team Topologies book happen frequently.
 
 **Collaboration** is when teams work together on a part of the system. 
 
-For example when a product team needs a software component that is not yet provided by the platform. However, the platform team has expertise in the technology and can designate a member to work with the product team to help build the solution.
+For example, when a product team needs a software component not provided by the platform. If the platform team has expertise in the technology and can designate a member to work with the product team to help build the solution, both teams can collaborate on this new solution.
 
 The platform team enables a business delivery, enforces good software engineering practices that will sustain the solution in the long term, and may even provide this component via the platform in the future. 
 
 **Facilitating** is when a team acts as a mentor on a specific topic to help another team.
 
-This happens when a team needs help on a specific topic (business or technology) and may ask for help. The teams will not be working together, but the team that is helping just invest time with explanations, materials, etc.
+This happens when a team needs help on a specific topic (business or technology) from another one. Both will not be working together, but the helper team will invest time with consultancies like explanations and materials.
 
-A platform team that provides a solution that isn't very mature or doesn't have good documentation yet. It will likely be involved in a lot of mentoring, helping people, answering questions, etc. This also happens when you're providing solutions for teams with very junior members in the company.
+A platform team that isn't very mature or doesn't have a good documentation, will likely be involved in a lot of mentoring, helping people, and answering questions. Likewise, the same can happen with teams with junior members using our solutions.
 
 **X-as-a-service** is when a team provides and another team consumes something as a service.
 
-A team that provides solutions for other internal or external teams must constantly seek to maintain this type of interaction. This is better for everyone. Users need to gain access and get started. Providers have less mentoring and support overhead.
+A team that provides solutions for other internal or external teams must constantly seek to maintain this type of interaction. This is better for both. Users need to obtain access and get started quickly while Providers have less mentoring and support overhead.
 
 To achieve this type of interaction, it is necessary to invest mainly in the usability and documentation of the services. A [good developer experience](https://www.thoughtworks.com/en-br/insights/blog/why-you-should-invest-good-developer-experience-today) is key!
 
@@ -101,7 +101,7 @@ To achieve this type of interaction, it is necessary to invest mainly in the usa
 
 A platform team analyzes the internal teams’ requirements, looks for external solutions, and makes them more convenient for developers to use on a daily basis. In this context, one of the main characteristics of a good platform is the ease of use and services should be offered in self-service mode with well-written documentation and good support for developers.
 
-Suppose a data scientist with a background in statistics, economics, or physics was hired to create models that bring a high business return to the company. Your scope of work should not include knowledge of details on how to provision infrastructure for deploying models. The platform team would act by solving the inherent complexities and providing a simplified user experience.
+Suppose a data scientist with a background in statistics, economics, or physics was hired to create models that bring a high business return to the company. Their scope of work should not include knowledge of details on how to provision infrastructure for deploying models. The platform team should act by solving the inherent complexities and providing a simplified user experience.
 
 The discussion about the importance of platform teams is not something new, but the decision to create it must be considered according to each context. The decision to create an in-house platform team should be a balance between the long-term efficiency and quality benefits versus the financial costs involved in building and evolving it.
 
@@ -215,9 +215,9 @@ Another important aspect of prioritization is considering the company’s object
 
 Agile execution is essential to reduce errors during software development. When we are going to develop some software components for users, we create prototypes to show to a group of users before the development itself. This allows improving before even starting! Software delivery is broken into small parts whenever possible. We generate more value, get feedback and learn from every interaction.
 
-We decided to use [scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) as a framework for developing and delivering our solutions. Our sprint backlog is composed of development epics previously planned on OKRs, operation, and support tasks. It’s common to have some problem someone faced in the previous week and we need to fix it in the new sprint, or someone needing support to deliver some project. 
+We decided to use [scrum](https://en.wikipedia.org/wiki/Scrum_(software_development)) as a framework for developing. Our sprint backlog is composed of development epics previously planned on OKRs, operation, and support tasks. It’s common to have some problem someone faced in the previous week and we need to fix it in the new sprint, or someone needing support to deliver some project.
 
-After starting the sprint, we have daily meetings with the entire team to assess progress and resolve any blocks that happen. This meeting is important to keep everyone's commitment to what was agreed. Seeing the progress of the tasks on the board renews the motivation to stay focused and seeing the lack of progress turns on the alert for any problems that might be happening.
+After starting the sprint, we have daily meetings with the entire team to assess progress and resolve any blocks that occurred. This meeting is important to keep everyone's commitment to what was agreed. Seeing the progress of the tasks on the board renews the motivation to stay focused and seeing the lack of progress turns on the alert for any problems that might be happening.
 
 Our software engineering culture is mature. Every piece of software needs to be reviewed by team members and only can be merged after being accepted by at least one person. Automated tests, documentation, changelog are very important for us, and you use Gitlab for automating CI/CD pipelines. The tasks are done during a biweekly sprint, and we finish with a sprint review and retrospective.
 
