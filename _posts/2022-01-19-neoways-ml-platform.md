@@ -34,11 +34,11 @@ The company's growth brought new challenges to maintain a good communication str
 
 # Organizational Structure
 
-For a long time, the company was organized by functional areas like platform, data, data science, application, product. This kind of organization caused functional silos that led to problems such as lack of systemic thinking, and hard dependency management during software development.
+For a long time, the company was organized by functional areas like platform, data engineering, data science, application, product. This kind of organization caused functional silos that led to problems such as lack of systemic thinking, and hard dependency management during software development.
 
 For instance, the data science team struggled to get historical data in the proper format for the modeling tasks. The team also had difficulties deploying model predictions integrated with the company's architecture. Both tasks had dependencies with internal teams and the services were not provided properly.
 
-That organizational structure resulted in inefficiency to deliver business value to our customers. At the end of 2019, the company was redesigned into cross-functional teams focused on business domains capable of delivering end-to-end solutions and accelerating software delivery.
+That organizational structure resulted in inefficiency to deliver business value to our customers. In early 2020, the company was redesigned into cross-functional teams focused on business domains capable of delivering end-to-end solutions and accelerating software delivery.
 
 ## On Team Topologies
 
@@ -64,7 +64,7 @@ The image below presents a very summarized view of some cells with which our mac
 
 The product and service cells are responsible for delivering value directly to the end customers. They need to be empowered to build and deliver customer value as quickly and independently as possible. Those cells are created to better serve the business domain requirements.
 
-On the other hand, the platform cells have two responsibilities. The first one is to simplify the use of complex technologies that require a high level of specialization, such as Kubernetes, Spark clusters, distributed systems, data lake, streaming platform, IAM, security, data warehouses, search engines. The list goes on.
+On the other hand, the platform cells have two responsibilities. The first one is to simplify the use of complex technologies that require a high level of specialization, such as Kubernetes, Spark clusters, distributed systems, data lake, streaming platform, IAM, security, data warehouses, search engines... The list goes on.
 
 The second responsibility is to prevent business cells from building multiple solutions for solved problems across the company. When a problem that is common for several teams pop up, the platform cells act to create a single solution that solves the problem more efficiently thinking in the long term.
 
