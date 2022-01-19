@@ -1,6 +1,6 @@
 ---
 author: brenocosta
-title: "Building the Neoway's Machine Learning Platform with product thinking"
+title: "Building the Neoway's Machine Learning Platform with Product Thinking"
 categories:
   - machine-learning
 tags:
