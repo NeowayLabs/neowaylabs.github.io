@@ -1,6 +1,6 @@
 ---
 author: brenocosta
-title: "Building the Neoway's ML Platform with a Team-First Approach and Product Thinking"
+title: "Building Neoway's ML Platform with a Team-First Approach and Product Thinking"
 categories:
   - machine-learning
 tags:
