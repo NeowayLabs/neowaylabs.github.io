@@ -1,6 +1,6 @@
 ---
 author: brenocosta
-title: "Building the Neoway's Machine Learning Platform with Product Thinking"
+title: "Building the Neoway's ML Platform with a Team-First Approach and Product Thinking"
 categories:
   - machine-learning
 tags:
@@ -239,4 +239,4 @@ Internal teams trust internal platform services if they deliver value, are easy 
 * Use every interaction with your users to get feedback and improve the services. Payment comes in the long term.
 
 
-> Special thanks to my colleagues working on the Machine Learning platform team [Manoel Vilela](https://www.linkedin.com/in/lerax/), [Matheus Frata](https://www.linkedin.com/in/matheus-frata), [Victor Gabriel](https://www.linkedin.com/in/victorgabriel56/), to the current management team [Leandro Leão](https://www.linkedin.com/in/leandroleao/), [Gabriella Xavier](https://www.linkedin.com/in/gabriellaughini/), [Matheus Vill](https://www.linkedin.com/in/matheus-vill-a9005639/), and to the people who were part of this journey in the past [Yuri Vendruscolo](https://www.linkedin.com/in/yvendruscolo/), [André Bittencourt](https://www.linkedin.com/in/andrecb/).
+> Special thanks to my colleagues working on the Machine Learning platform team [Manoel Vilela](https://www.linkedin.com/in/lerax/), [Matheus Frata](https://www.linkedin.com/in/matheus-frata), [Victor Gabriel](https://www.linkedin.com/in/victorgabriel56/), to the current management team [Leandro Leão](https://www.linkedin.com/in/leandroleao/), [Gabriella Xavier](https://www.linkedin.com/in/gabriellaughini/), [Matheus Vill](https://www.linkedin.com/in/matheus-vill-a9005639/), and to the people who were part of the team in the past [Yuri Vendruscolo](https://www.linkedin.com/in/yvendruscolo/), [André Bittencourt](https://www.linkedin.com/in/andrecb/).
