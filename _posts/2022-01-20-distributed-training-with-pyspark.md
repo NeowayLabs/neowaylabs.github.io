@@ -135,7 +135,7 @@ accuracy_score(y_test, np.rint(centralized_preds))
 
 Accuracy reached 0.9045. This number alone doesn't say anything because we're interested in making comparisons with upcoming approaches. So it is a benchmark number. 
 
-Before continuing reading, try to think about what the expected results would be and only after continuing reading.
+Before continuing reading, try to think about what the expected results would be, and only after continuing reading.
 
 ## Second approach: distributed training
 
