@@ -139,7 +139,7 @@ Before continuing reading, try to think about what the expected results would be
 
 ## Second approach: distributed training
 
-In the second approach, we are going to use a distributed CatBoost model with the default hyperparameters set. The same cross-validation is performed as done in the first approach, but the data always keeps distributed across the entire cluster.
+In the second approach, we are going to use a distributed CatBoost model with the default hyperparameters set. The same cross-validation is performed as done in the first approach, but the data always remains distributed across the entire cluster.
 
 As the synthetic dataset created is initially centralized, we need the following steps so the models can be trained:
 
