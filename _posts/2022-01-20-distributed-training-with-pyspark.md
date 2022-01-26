@@ -221,7 +221,7 @@ accuracy_score(y_test, np.rint(distributed_preds))
 
 Accuracy reached 0.9043. Note that this accuracy is very close to the accuracy obtained with the first centralized approach (0.9045). The difference is in the execution time: distributed training takes longer (21:21 minutes), approximately 5.5 times longer for this case shown. 
 
-Also, we did the following experiment: we ran this experiment for 29 different dataset sizes (e.g. 500k rows, 100k rows, etc) and the RMSE between centralized and distributed approaches was 0.00234! That is, a very small number compared to the accuracies obtained. 
+Also, we did the following experiment: we ran this experiment for 29 different dataset sizes (e.g. 500k rows, 100k rows, etc) and the RMSE between centralized and distributed approaches was 0.00234! This is a very small number compared to the accuracies obtained. 
 
 ## Third approach: centralized training on a sample of the dataset
 
