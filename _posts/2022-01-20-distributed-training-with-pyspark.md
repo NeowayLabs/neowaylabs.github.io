@@ -91,7 +91,7 @@ folds_index = list(skf.split(X_train, y_train))
 
 ## First approach: centralized training
 
-In the first approach, we are going to use a centralized CatBoost model with the default hyperparameters set. The metric we are going to use to compare the approachs is the accuracy since the target is balanced and we do not have any business considerations here.
+In the first approach, we are going to use a centralized CatBoost model with the default hyperparameters set. The metric we are going to use to compare the approaches is the accuracy since the target is balanced and we do not have any business considerations here.
 
 One model is expected for each fold reaching a total of 5 models. For each model, 4 folds are used for training and 1 fold used for validation. This is shown below.
 
