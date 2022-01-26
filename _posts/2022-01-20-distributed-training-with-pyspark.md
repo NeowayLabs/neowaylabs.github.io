@@ -244,7 +244,7 @@ for i, (train_index, valid_index) in enumerate(folds_index):
 dfs_replication = spark.createDataFrame(df_train)
 ```
 
-In the code below, Pandas UDF is defined. This function will be sent to each node in order to perform the training. If you are struggling to understand how Pandas UDF works, please read the post "[Leveraging Machine Learning Tasks with PySpark Pandas UDF](https://neowaylabs.github.io/data-science/Leveraging-Machine-Learning-Tasks-with-PySpark-Pandas-UDF/)".
+In the code below, Pandas UDF is defined. This function will be sent to each node to perform the training. If you are struggling to understand how Pandas UDF works, please read the post "[Leveraging Machine Learning Tasks with PySpark Pandas UDF](https://neowaylabs.github.io/data-science/Leveraging-Machine-Learning-Tasks-with-PySpark-Pandas-UDF/)".
 
 Note that after training the model, it must be sent to cloud storage. These models will then be downloaded into the driver to make the necessary predictions. This was the way we found to transfer files from nodes to the cluster driver.
 
