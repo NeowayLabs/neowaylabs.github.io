@@ -9,7 +9,7 @@ tags:
 excerpt: ""
 ---
 
-There are several definitions around the term "Big Data" all over the internet, books and so on. In practical terms, a data scientist "feels" a Big Data scenario every time the amount of data does not fit in memory. From this point on, there are several software available on the internet that try to solve this scenario, but one of the most common ways would be to work with PySpark.
+There are several definitions around the term "Big Data" all over the internet, books, and so on. In practical terms, a data scientist "feels" a Big Data scenario every time the amount of data does not fit in memory. From this point on, there are several tools available on the internet that try to solve this problem, but one of the most common ways would be to work with PySpark.
 
 Once PySpark is in use and the data is distributed across a cluster, various functions can be used to transform the data. However, the strategy on how to train your AI model may not yet be defined. Several options are possible. Let's try to list them:
 
