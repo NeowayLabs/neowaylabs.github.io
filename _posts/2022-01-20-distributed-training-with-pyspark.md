@@ -463,7 +463,7 @@ clf.fit(X_train, y_train)
 ensemble_preds = clf.predict(X_test)
 ```
 
-The final accuracy is 0.8965, an intermediate result between the ensemble with the mean and the ensemble with the median. Overall, a great result. As the difference is small in relation to the ensemble with the mean, it is not possible to say which one is the best. Also because another model could have been used (instead of Random Forest) and even the RF could be tested with other hyperparameters. In our experiences, in some results the stacking was better than the ensemble with the average.
+The final accuracy is 0.8965, an intermediate result between the ensemble with the mean and the ensemble with the median. Overall, a great result. As the difference is small in relation to the ensemble with the mean, it is not possible to say which one is the best. Also because another model could have been used (instead of Random Forest) and even the same model could be tested with other hyperparameters. In our experiences, in some results, the stacking was better than the ensemble with the average.
 
 ```python
 accuracy_score(y_test, ensemble_preds)
