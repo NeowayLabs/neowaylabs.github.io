@@ -191,7 +191,7 @@ for i, (train_index, valid_index) in tqdm(enumerate(folds_index)):
 
     5it [21:21, 256.21s/it] 
 
-As with the first centralized approach, we have 5 trained models and need to perform the predictions on the test set. An average among all models shows the final prediction, but in this case we need to perform all the conversions, just like we did in the training step.
+As with the first centralized approach, we have 5 trained models and need to perform the predictions on the test set. An average among all models shows the final prediction, but in this case, we need to perform all the conversions, just like we did in the training step.
 
 
 ```python
