@@ -343,7 +343,7 @@ for i, model in enumerate(centralized_models):
     Model 3's accuracy: 0.89216
     Model 4's accuracy: 0.89311
 
-Now we have the accuracy calculated across the test set. Note that they are very similar between each other and only fluctuate on the third decimal place. Note also that, despite coming from models trained on a sample, these accuracies are very close to the approaches that train on the entire dataset.
+Now we have the accuracy calculated across the test set. Note that they are very similar to each other and only fluctuate in the third decimal place. Note also that, despite coming from models trained on a sample, these accuracies are very close to the approaches that train on the entire dataset.
 
 ## Fourth approach: ensemble training
 
