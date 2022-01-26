@@ -482,7 +482,7 @@ The second approach achieved an accuracy of 0.9043 and a time of 256.21s per fol
 
 The third approach trained several models centralized on different samples of the dataset reaching accuracies ranging from 0.89216 to 0.89311 in a time of 26.53s. That is, an accuracy close to the initial centralized approach with a shorter training and prediction time. It is important to note that the training was centralized, but was carried out in the nodes in a distributed way, reducing the time required for training.
 
-The fourth approach showed how the third approach can come even closer to the first centralized approach. Through the ensemble of the different trained models it is possible to achieve even greater accuracies.
+The fourth approach showed how the third approach can come even closer to the first centralized approach. Through the ensemble of the different trained models, it is possible to achieve even greater accuracies.
 
 It is important to remember that the accuracy of the third and fourth approaches tend to have a greater difference from the accuracy of the initial centralized approach when the dataset size decreases. But if that happens, the centralized training shown in the first approach becomes a real possibility.
 
