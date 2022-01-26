@@ -225,7 +225,7 @@ Also, we did the following experiment: we ran this experiment for 29 different d
 
 ## Third approach: centralized training on a sample of the dataset
 
-Another possible solution deals with samples. Each of the 5 folds will be considered as a sample. Then these samples will be sent to the nodes via a Pandas UDF. In the code below, the Pandas Dataframe receives a new column called "fold" and the number in this column represents which fold this row belongs to.
+Another possible solution deals with samples. Each of the 5 folds will be considered as a sample. Then these samples will be sent to the nodes via a Pandas UDF. In the code below, the Pandas Dataframe receives a new column called *fold* and the number in this column represents which fold this row belongs to.
 
 
 ```python
