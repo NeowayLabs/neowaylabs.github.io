@@ -294,7 +294,7 @@ def run_model_by_fold(pdf):
     return res
 ```
 
-In this part, a groupby is performed on the "fold" column and a command is applied to send the Pandas UDF function "run_model_by_fold" to the nodes. Note that this Spark command is lazy.
+In this part, a groupby is performed on the *fold* column and a command is applied to send the Pandas UDF function `run_model_by_fold` to the nodes. Note that this Spark command is lazy.
 
 ```python
 results = dfs_replication.groupby("fold").apply(run_model_by_fold)
