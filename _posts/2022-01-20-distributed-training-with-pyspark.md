@@ -18,7 +18,7 @@ Once PySpark is in use and the data is distributed across a cluster, various fun
 3. Centralize a representative sample of the data;
 4. Train on multiple samples and then ensemble them.
 
-Option 1 will be discussed only for the sake of benchmarking, as it would not be possible by the definition of the problem presented by this post. Options 2, 3 and 4 will be shown with their pros and cons.
+Option 1 will be discussed only for the sake of benchmarking, as it would not be possible by the definition of the problem presented by this post. Options 2, 3, and 4 will be shown with their pros and cons.
 
 Before starting, we strongly recommend reading the post "[Leveraging Machine Learning Tasks with PySpark Pandas UDF](https://neowaylabs.github.io/data-science/Leveraging-Machine-Learning-Tasks-with-PySpark-Pandas-UDF/)", written by the same authors of this study.
 
