@@ -52,7 +52,7 @@ sns.set(rc={'figure.figsize':(17,5)})
 
 ## Defining the synthetic dataset
 
-For the purpose of this experiment, we are going to use a synthetic dataset using sklearn datasets.make_classification to generate the data. The dataset will contain one million instances and 20 features. This number could be even higher for the distributed approach, but we need to compare it to the centralized approach and therefore we cannot increase it that much.
+For this experiment, we are going to use a synthetic dataset using sklearn `datasets.make_classification` to generate the data. The dataset will contain one million instances and 20 features. This number could be even higher for the distributed approach, but we need to compare it to the centralized approach and therefore we cannot increase it that much.
 
 In order to make things a bit harder, we are going to configure only 10 features as informative, flip 10% of the target values and short the distance between classes. Why this? Because we choosed this way. You are welcome to reproduce this experiment with other combinations. Have fun!
 
