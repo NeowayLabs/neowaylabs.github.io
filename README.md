@@ -1,59 +1,43 @@
-# neowaylabs.github.io
+# NeowayLabs
 
-Neoway Tech-Blog.
+## Development
 
-# Posts
+### Environment
 
-To write a new post, create a file in markdown inside of `_posts` dir.
-For projects pages, put the file on `_projects`.
+Verify if you have [node](http://nodejs.org/) and [npm](https://www.npmjs.org/) installed / updated.
 
-A template of header for post it is something like this:
+<hr>
 
-```
----
-author: super_programmer
-title: "Why NLP is so Awesome?"
-categories:
-  - programming
-tags:
-  - nlp
-  - machine-learning
-excerpt:  "A report about the process of applying NLP to Neoway models"
----
+### Getting started
+
+1 - Clone this repository:
+
+```sh
+$ git clone https://github.com/NeowayLabs/neowaylabs.github.io.git
 ```
 
-But you are not a author yet? Create your profile [here][authors] too and make a [Pull Request][pr]!
-
-[authors]: https://github.com/NeowayLabs/neowaylabs.github.io/blob/master/_data/authors.yml
-[pr]: https://help.github.com/en/articles/about-pull-requests
-
-# Running
-
-Requirements:
-
-* Docker
-
-After installing Docker just run:
-
-```
-make image
-make blog
+```sh
+$ cd neowaylabs.github.io
 ```
 
-And the blog should be available at 127.0.0.1:4000.
+2 - Install all dependencies:
 
-# Running on host
-
-Requirements:
-
-* Ruby
-* Ruby-bundler
-* GNU Make
-
-After installing the dependencies just run:
-
-``` bash
-make serve
+```sh
+$ npm install
 ```
 
-The blog should be available at 127.0.0.1:4000.
+3 - Start the project:
+
+```
+$ npm run dev
+```
+
+## All automatic tasks
+
+- `npm run dev` - Start a local server for development.
+- `npm run build` - Build static files.
+- `npm run preview` - Start a local server only for Preview.
+
+## License
+
+[MIT License](https://github.com/NeowayLabs/neowaylabs.github.io/blob/landing-page/LICENSE.md)
