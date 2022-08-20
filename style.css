@@ -115,17 +115,18 @@ body {
   text-align: center;
   font-size: 16px;
   font-weight: 400;
+  transition: background .3s;
+  text-decoration: none;
 }
 
 .card__button:hover {
-  background-color: blue;
-  color: red;
+  background-color: #a25621;
   cursor: pointer;
 }
 
 .card__button:focus {
   outline: none;
-  border: 2px solid blue
+  border: 2px solid #a25621;
 }
 
 .card__button:active {
