@@ -1,6 +1,9 @@
 import './style.css';
 import changeBackgroundRGB from './changeBackgroundRGB.js';
 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
 const body = document.getElementById('bg');
 
 if (typeof DeviceOrientationEvent.requestPermission === 'function') {
@@ -32,3 +35,9 @@ if (window.DeviceOrientationEvent) {
   }, true);
 
 }
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <h1> Hello React + Vitte </h1>
+  </React.StrictMode>
+)
